@@ -1,0 +1,49 @@
+<section class="page">
+  <app-login-hero
+    title="Login"
+    subTitle="Acesse a sua conta para ter acesso ao painel e outras ferramentas"
+  ></app-login-hero>
+  <app-login-content
+    title="Bem-vindo"
+    subTitle="Insira suas informações para acessar sua conta"
+  >
+    <form (ngSubmit)="onSubmit()" #formLogin="ngForm">
+      <div class="form-group">
+        <label>E-mail</label>
+        <input
+          class="form-control"
+          type="email"
+          name="email"
+          id="email"
+          [(ngModel)]="login.email"
+          required
+        />
+      </div>
+      <div class="form-group">
+        <label>Senha</label>
+        <input
+          class="form-control"
+          type="password"
+          name="password"
+          id="password"
+          [(ngModel)]="login.password"
+          required
+        />
+      </div>
+      <button
+        type="submit"
+        class="btn btn-danger btn-block"
+        [disabled]="formLogin.form.invalid"
+      >
+        Entrar
+      </button>
+      <!-- <button
+        type="button"
+        class="btn btn-link btn-block"
+        [routerLink]="['/create-account']"
+      >
+        Criar conta
+      </button> -->
+    </form>
+  </app-login-content>
+</section>
