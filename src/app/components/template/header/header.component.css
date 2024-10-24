@@ -1,0 +1,36 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 100;
+  position: fixed;
+}
+.header-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #333;
+}
+
+.header .logo {
+  max-height: 82px;
+  margin-right: 80px;
+}
+
+.header .title-group {
+  padding-left: 25px;
+}
+
+.header .title-group i {
+  padding-right: 5px;
+}
+
+button {
+  margin: 20px 15px 15px 10px;
+}
