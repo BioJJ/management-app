@@ -1,0 +1,32 @@
+<mat-card>
+  <!-- <mat-card-title> {{usuarioLogado.profile == 'ADM'? 'Alterar Usuário' : 'Atualizar seus Dados' }}</mat-card-title> -->
+  <mat-card-title> Atualizar seus Dados</mat-card-title>
+  <form>
+    <mat-form-field>
+      <input matInput placeholder="Nome" [(ngModel)]="user.name" name="name" />
+    </mat-form-field>
+
+    <mat-form-field>
+      <input
+        matInput
+        placeholder="Email"
+        [(ngModel)]="user.email"
+        name="email"
+      />
+    </mat-form-field>
+
+    <mat-form-field>
+      <input
+        matInput
+        placeholder="Cargo"
+        [(ngModel)]="user.cargo"
+        name="cargo"
+      />
+    </mat-form-field>
+  </form>
+  <button mat-raised-button (click)="updateContact()" color="primary">
+    Salvar
+  </button>
+
+  <button mat-raised-button (click)="cancel()">Cancelar</button>
+</mat-card>
