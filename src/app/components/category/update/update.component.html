@@ -1,0 +1,27 @@
+<mat-card>
+  <mat-card-title>Alterar Categoria</mat-card-title>
+  <form>
+    <mat-form-field>
+      <input
+        matInput
+        placeholder="description"
+        [(ngModel)]="category.description"
+        name="description"
+      />
+    </mat-form-field>
+
+    <mat-form-field>
+      <input
+        matInput
+        placeholder="Nome"
+        [(ngModel)]="category.name"
+        name="name"
+      />
+    </mat-form-field>
+  </form>
+  <button mat-raised-button (click)="updateProperty()" color="primary">
+    Salvar
+  </button>
+
+  <button mat-raised-button (click)="cancel()">Cancelar</button>
+</mat-card>
