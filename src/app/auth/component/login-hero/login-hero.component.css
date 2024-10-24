@@ -1,0 +1,95 @@
+:host {
+  padding: 2rem;
+  background: linear-gradient(#e40808, #e45858);
+  min-height: calc(100vh - 4rem);
+  width: 100% ;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+  .bg-circles {
+    position: absolute;
+    bottom: 0;
+    transform: translate(-50%, 50%);
+    opacity: 50%;
+    circle {
+      stroke: #fff;
+      animation-duration: 4s;
+      animation-iteration-count: infinite;
+      animation-timing-function: ease-in-out;
+      &.circle-1 {
+        animation-name: moveCircle1;
+      }
+      &.circle-2 {
+        animation-name: moveCircle2;
+      }
+
+      @media (max-width: 700px) {
+        &.circle-1 {
+          animation-name: moveCircle1Mobile;
+        }
+        &.circle-2 {
+          animation-name: moveCircle2Mobile;
+        }
+      }
+    }
+  }
+  .box {
+    max-width: 330px;
+  }
+  @media (max-width: 900px) {
+    width: 50%;
+  }
+  @media (max-width: 700px) {
+    width: calc(100% - 4rem);
+    min-height: auto;
+    h1 {
+      font-size: 1.5rem;
+    }
+    .bg-circles {
+      transform: translate(0%, -20%);
+    }
+  }
+}
+
+@keyframes moveCircle1 {
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(-20px, 20px);
+  }
+}
+
+@keyframes moveCircle2 {
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(20px, 20px);
+  }
+}
+
+@keyframes moveCircle1Mobile {
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(50px, 0px);
+  }
+}
+
+@keyframes moveCircle2Mobile {
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(20px, 0px);
+  }
+}

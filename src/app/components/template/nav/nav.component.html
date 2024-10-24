@@ -1,0 +1,29 @@
+<nav class="app-navigation">
+  <mat-sidenav
+    *ngIf="usuarioLogado"
+    class="sidenav"
+    mode="side"
+    opened
+    fixedInViewport="true"
+    fixedTopGap="64"
+  >
+    <mat-nav-list class="nav-list">
+      <a mat-list-item routerLink="/">
+        <i class="material-icons"> home </i>
+        Início
+      </a>
+      <a mat-list-item routerLink="/users/update/{{ usuarioLogado.id }}">
+        <i class="material-icons"> person </i>
+        Perfil
+      </a>
+      <a mat-list-item routerLink="/categories">
+        <i class="material-icons"> real_estate_agent </i>
+        Categorias
+      </a>
+      <a mat-list-item routerLink="/product">
+        <i class="material-icons"> storefront </i>
+        Produtos
+      </a>
+    </mat-nav-list>
+  </mat-sidenav>
+</nav>
