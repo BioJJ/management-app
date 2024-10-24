@@ -1,0 +1,49 @@
+:host {
+  width: 50%;
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  ::ng-deep .logo {
+    margin-bottom: 4rem !important;
+    @media (max-width: 700px) {
+      margin-bottom: 2rem !important;
+    }
+  }
+  @media (max-width: 900px) {
+    width: 50%;
+  }
+  @media (max-width: 700px) {
+    width: calc(100% - 4rem);
+    min-height: auto;
+  }
+  ::ng-deep {
+    .ustore-inputform-control  {
+      margin-bottom: 1rem;
+    }
+    .ustore-button { width: 100%; }
+  }
+  .box {
+    max-width: 330px;
+  }
+  ::ng-deep .remember {
+    text-align: right;
+    a {
+      text-decoration: none;
+      text-align: right;
+      color: #000;
+    }
+  }
+  ::ng-deep .cancel {
+    text-align: center;
+    a {
+      text-decoration: none;
+      text-align: right;
+      color: #000;
+    }
+  }
+
+  ::ng-deep .ustore-button {
+    margin: 1rem auto;
+  }
+}
